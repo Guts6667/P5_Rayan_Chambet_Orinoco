@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+        <title>Orinoco</title>
+    </head>
+    <body>
+        <!-- -------------------------- Header ------------------------------------------- -->
+        <header class="container-fluid sticky-top" style="background-color: #FFF7FE;">
+                <!-- -------------------------- Navigation ------------------------------------------- -->
+                <nav class="row navbar  navbar-light">
+                        <a href="../index.html" class="navbar-brand">
+                            <img src="../P5_01_images/logo.png" class="img-responsive" style="width: 40%;">
+                        </a>
+                    <div class=" navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="navbarContent" class="collapse navbar-collapse">
+                            <ul class="navbar-nav navbar-dark" style="list-style-type: none; ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="../index.html"><h4>Accueil</h4></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="panier.html"><h4>Mon Panier</h4></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </header>
+        
+        <!-- -------------------------- Section ------------------------------------------- -->
+
+        <section class="container mt-5 ">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>Votre panier</h2>
+                    <p style="font-size: 1.4em;">Un Orinoco pour toutes vos envies !</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------------- Section ------------------------------------------- -->
+
+        <section class="container">
+
+            <!-- ------------------ Card ------------------- -->
+
+            <article class="card shadow mb-3 align-content-center" style="background-color: #FFF7FE;">
+                <div class="col m-2">
+                    <img src="../P5_01_images/oak_1.jpg" class="rounded" width="75px" height="75px" alt="...">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Vous y êtes presque !</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="text-right mx-5">Total : </p>
+                        
+                        <!-- ------------------ Form ------------------- -->
+
+                        <form>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Exemple : jeand_dupont@gmail.com">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAddress">Adresse</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="Exemple : Rue de Belleville">
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="inputCity">Ville</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="Exemple : Lyon">
+                              </div>
+                              <div class="form-group col-md-2">
+                                <label for="inputZip">Code postale</label>
+                                <input type="number" class="form-control" id="inputZip">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <button class="btn rounded mx-1 text-light" type="submit" style="background-image: linear-gradient(to right top, #8f5afe,  #ff809a, #ffb495, #ffe0b9); box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);">
+                                Valider vos informations
+                            </button>
+                          </form>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn text-light" data-toggle="modal" data-target="#exampleModalCenter" style="background-image: linear-gradient(to top left, #8f5afe,  #ff809a, #ffb495, #ffe0b9); box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);">
+                        Valider la commande
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Félicitations !</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Votre commande a bien été prise en compte 
+                                    <br>
+                                    <br>
+                                    Votre numéro de commande :  
+                                    <br>
+                                    Total : € 
+                                    <br>
+                                    <br>
+                                    Nous espérons vous retrouver bientôt chez Orinoco 
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </article>
+        </section>
+
+        <!-- -------------------------- Footer ------------------------------------------- -->
+    
+
+        <footer class="container-fluid p-3" style="background-color: #FFF7FE;">
+            <div class="row">
+                <!-------------- A Propos --------------->
+                <div class="col-sm-12  col-md-3  my-2">
+                    <h4>À propos</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+                  <!-------------- Nos Reseaux --------------->
+                <div class="col-sm-12  col-md-3  my-2">
+                    <h4>Nos réseaux</h4>
+                    <div class="row px-4">
+                        <div class="mx-2">
+                            <a href="#">
+                                <i class="fab fa-facebook-square" style="color: #3b5998; font-size: 2em;" ></i>
+                            </a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="#">
+                                <i class="fab fa-instagram" style="color: #e1306c; font-size: 2em;"></i>
+                            </a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="#">
+                                <i class="fab fa-twitter" style="color: #00acee; font-size: 2em;"></i>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+                  <!-------------- Contact --------------->
+                  <div class="col-sm-12  col-md-3 my-2">
+                    <h4>Nous contacter</h4>
+                    <p style="font-size: 1.2em;">Mail : contact@orinoco.com</p>
+                </div>
+            </div>
+        </footer>
+    
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
