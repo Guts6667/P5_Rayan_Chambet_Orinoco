@@ -75,7 +75,7 @@
                         
                         <!--  Form  -->
 
-                        <form class="row g-3 needs-validation">
+                        <form id="formulaire" class="row g-3 needs-validation">
                             <div class="col-md-4">
                               <label for="validationCustom01" class="form-label">Prénom</label>
                               <input id="form-firstName" type="text" class="form-control" pattern="[a-zA-Z]+" required>
@@ -93,7 +93,7 @@
                             <div class="col-md-4">
                               <label for="validationCustomUsername" class="form-label">Email</label>
                               <div class="input-group has-validation">
-                                <input id="form-email" type="email" class="form-control" aria-describedby="inputGroupPrepend" required>
+                                <input id="form-email" type="email" class="form-control error" aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                   Choisissez un e-mail
                                 </div>
@@ -127,7 +127,7 @@
                               </div>
                             </div>
                             <div class="col-12" style="margin-top: 30px;">
-                              <button data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-primary" type="submit">A la caisse !</button>
+                              <button id="btn-submit"  class="btn btn-primary" type="button">A la caisse !</button>
                             </div>
                           </form>
                     </div>
