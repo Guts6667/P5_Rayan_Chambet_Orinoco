@@ -35,41 +35,96 @@ function displayPanier(){
 
 displayPanier()
 
+
+
 /* Soumission du formulaire */
 
-document.querySelector('.needs-validation').addEventListener('submit', function (event) {
-    event.preventDefault()
-    event.stopPropagation()
+document.getElementById('btn-submit').addEventListener('click', function (event) {
 
-    let panier = JSON.parse(localStorage.getItem('panier'))
+    
+    
+   if (formVerification()== true){
+       
+     
+   
+       let panier = JSON.parse(localStorage.getItem('panier'))
+   
+       let contact = {
+                    firstName: document.querySelector('#form-firstName').value,
+                    lastName: document.querySelector('#form-lastName').value,
+                    address: document.querySelector('#form-address').value,
+                    city: document.querySelector('#form-city').value,
+                    email: document.querySelector('#form-email').value,
+               };
+   
+       let products = []
+       panier.forEach((product) => {
+           products.push(product.ref)
+       })
+   
+       fetch('http://localhost:3000/api/teddies/order', {
+               method: "POST",
+               headers: {
+                   'Content-Type' : 'application/json'
+               },
+               body : JSON.stringify({products, contact})
+           })
+           .then((response) => {
+               return response.json();
+           })
+           .then((data) => {
+               localStorage.setItem('commande', data.orderId)
+               localStorage.setItem('total', document.querySelector('#panier-total').textContent)
+               window.location.href = "./confirmation.html"
+           })
 
-    let contact = {
-                 firstName: document.querySelector('#form-firstName').value,
-                 lastName: document.querySelector('#form-lastName').value,
-                 address: document.querySelector('#form-address').value,
-                 city: document.querySelector('#form-city').value,
-                 email: document.querySelector('#form-email').value,
-            };
 
-    let products = []
-    panier.forEach((product) => {
-        products.push(product.ref)
-    })
-
-    fetch('http://localhost:3000/api/teddies/order', {
-            method: "POST",
-            headers: {
-                'Content-Type' : 'application/json'
-            },
-            body : JSON.stringify({products, contact})
-        })
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            localStorage.setItem('commande', data.orderId)
-            localStorage.setItem('total', document.querySelector('#panier-total').textContent)
-            window.location.href = "./confirmation.html"
-        })
+   }else{
+        return false;
+   }
+  
 
 })
+console.log(localStorage);
+
+
+
+
+
+
+// Validation préalable avant soumission du formulaire
+
+function formVerification(){
+    
+    let email = document.querySelector('#form-email');
+    let address = document.querySelector('#form-address');
+    let city = document.querySelector('#form-city');
+    let firstName = document.querySelector('#form-firstName');
+    let lastName = document.querySelector('#form-lastName');
+
+   
+    if (firstName.value==null || firstName.value=="" || isNaN (firstName.value)== false){  
+        alert("Veuillez renseigner votre prénom et n'utiliser que des lettres")
+        return false;  
+
+    }else if(lastName.value==null || lastName.value==""||isNaN (lastName.value)== false){  
+        alert("Veuillez renseigner votre nom et n'utiliser que des lettres")
+        return false;  
+        
+    }else if(city.value==null || city.value==""||isNaN (city.value)== false){
+        alert("Veuillez renseigner votre ville et n'utiliser que des lettres")
+        return false;
+        
+    }else if(address.value==null || address.value==""){
+        alert("Veuillez renseigner votre adresse")
+        return false;  
+    }else if(email.value==null || email.value==""){
+        alert("Veuillez renseigner votre mail correctement")
+        return false;
+    }
+    else{
+        return true;
+    }
+    
+      } 
+
