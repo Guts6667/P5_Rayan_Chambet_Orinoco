@@ -16,5 +16,3 @@ In order to run this project :
 <img width="1440" alt="Capture d’écran 2021-09-03 à 04 25 36" src="https://user-images.githubusercontent.com/76847062/131941734-5c882045-2254-42cc-839e-837282a518de.png">
 <img width="1440" alt="Capture d’écran 2021-09-03 à 04 25 43" src="https://user-images.githubusercontent.com/76847062/131941739-3c31ff1c-01d0-497c-b3fc-180fd810beae.png">
 <img width="1440" alt="Capture d’écran 2021-09-03 à 04 25 50" src="https://user-images.githubusercontent.com/76847062/131941743-94e91c1f-1ddf-40e0-85b0-b8c28d45769d.png">
-<img width="1440" alt="Capture d’écran 2021-09-03 à 04 25 56" src="https://user-images.githubusercontent.com/76847062/131941747-3289e24d-6574-4a9e-b365-3735bf8e2cf4.png">
-
